@@ -10,12 +10,12 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Theme Template for Bootstrap</title>
+    <title>Habitraq - Dashboard</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap theme -->
-    <link href="../../dist/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="theme.css" rel="stylesheet">
@@ -29,6 +29,34 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+	
+<style>
+
+.day {
+  fill: #fff;
+  stroke: #ccc;
+}
+
+.month {
+  fill: none;
+  stroke: #000;
+  stroke-width: 2px;
+}
+
+.RdYlGn .q0-11{fill:rgb(165,0,38)}
+.RdYlGn .q1-11{fill:rgb(215,48,39)}
+.RdYlGn .q2-11{fill:rgb(244,109,67)}
+.RdYlGn .q3-11{fill:rgb(253,174,97)}
+.RdYlGn .q4-11{fill:rgb(254,224,139)}
+.RdYlGn .q5-11{fill:rgb(255,255,191)}
+.RdYlGn .q6-11{fill:rgb(217,239,139)}
+.RdYlGn .q7-11{fill:rgb(166,217,106)}
+.RdYlGn .q8-11{fill:rgb(102,189,99)}
+.RdYlGn .q9-11{fill:rgb(26,152,80)}
+.RdYlGn .q10-11{fill:rgb(0,104,55)}
+
+</style>
+
   </head>
 
   <body role="document">
@@ -43,23 +71,28 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Bootstrap theme</a>
+          <a class="navbar-brand" href="#" style="padding-right: 100px">Habitraq</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li class="active"><a href="#">Dashboard</a></li>
+            <li><a href="#about">Check In</a></li>
+            <li><a href="#about">Goals</a></li>
+            <li><a href="#contact">Habits</a></li>
+            <li><a href="#contact">Metrics</a></li>
+            <li><a href="#contact">Analysis</a></li>
+            <li><a href="#contact">Reminders</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Welcome, Alex! <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Preferences</a></li>
+                <li><a href="#">Payment information</a></li>
                 <li class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
+                <li><a href="#">Help</a></li>
+                <li><a href="#">Log out</a></li>
               </ul>
             </li>
           </ul>
@@ -70,573 +103,594 @@
     <div class="container theme-showcase" role="main">
 
       <!-- Main jumbotron for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <h1>Theme example</h1>
-        <p>This is a template showcasing the optional theme stylesheet included in Bootstrap. Use it as a starting point to create something more unique by building on or modifying it.</p>
+      <div class="jumbotron" style="margin-top:100px">
+        <h1>You met 1/3 of your goals this week.</h1>
+		<div class="container">
+		  <div class="row">
+		    <div class="col-md-6"> 
+              <p>That's good - but you can do better.</p>
+			  <p>You've been doing really well with the exercise!  This week, let's focus on flossing every day and drinking only on Friday and Saturday.  Also, be sure to weigh yourself every day.</p>
+		      <p>Remember - if you try hard, you can become the better person you want to be!  Let's get those numbers up to 100 percent!</p>
+		    </div>
+		    <div class="col-md-6">
+              <canvas id="myChart3" style="width:100%;height:100%;"></canvas>
+		    </div>
+	      </div>
+		</div>
       </div>
 
-
-      <div class="page-header">
-        <h1>Buttons</h1>
-      </div>
-      <p>
-        <button type="button" class="btn btn-lg btn-default">Default</button>
-        <button type="button" class="btn btn-lg btn-primary">Primary</button>
-        <button type="button" class="btn btn-lg btn-success">Success</button>
-        <button type="button" class="btn btn-lg btn-info">Info</button>
-        <button type="button" class="btn btn-lg btn-warning">Warning</button>
-        <button type="button" class="btn btn-lg btn-danger">Danger</button>
-        <button type="button" class="btn btn-lg btn-link">Link</button>
-      </p>
-      <p>
-        <button type="button" class="btn btn-default">Default</button>
-        <button type="button" class="btn btn-primary">Primary</button>
-        <button type="button" class="btn btn-success">Success</button>
-        <button type="button" class="btn btn-info">Info</button>
-        <button type="button" class="btn btn-warning">Warning</button>
-        <button type="button" class="btn btn-danger">Danger</button>
-        <button type="button" class="btn btn-link">Link</button>
-      </p>
-      <p>
-        <button type="button" class="btn btn-sm btn-default">Default</button>
-        <button type="button" class="btn btn-sm btn-primary">Primary</button>
-        <button type="button" class="btn btn-sm btn-success">Success</button>
-        <button type="button" class="btn btn-sm btn-info">Info</button>
-        <button type="button" class="btn btn-sm btn-warning">Warning</button>
-        <button type="button" class="btn btn-sm btn-danger">Danger</button>
-        <button type="button" class="btn btn-sm btn-link">Link</button>
-      </p>
-      <p>
-        <button type="button" class="btn btn-xs btn-default">Default</button>
-        <button type="button" class="btn btn-xs btn-primary">Primary</button>
-        <button type="button" class="btn btn-xs btn-success">Success</button>
-        <button type="button" class="btn btn-xs btn-info">Info</button>
-        <button type="button" class="btn btn-xs btn-warning">Warning</button>
-        <button type="button" class="btn btn-xs btn-danger">Danger</button>
-        <button type="button" class="btn btn-xs btn-link">Link</button>
-      </p>
-
-
-      <div class="page-header">
-        <h1>Tables</h1>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <table class="table">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Username</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="col-md-6">
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Username</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-6">
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Username</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td rowspan="2">1</td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@TwBootstrap</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="col-md-6">
-          <table class="table table-condensed">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Username</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-
-      <div class="page-header">
-        <h1>Thumbnails</h1>
-      </div>
-      <img data-src="holder.js/200x200" class="img-thumbnail" alt="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera">
-
-
-      <div class="page-header">
-        <h1>Labels</h1>
-      </div>
-      <h1>
-        <span class="label label-default">Default</span>
-        <span class="label label-primary">Primary</span>
-        <span class="label label-success">Success</span>
-        <span class="label label-info">Info</span>
-        <span class="label label-warning">Warning</span>
-        <span class="label label-danger">Danger</span>
-      </h1>
-      <h2>
-        <span class="label label-default">Default</span>
-        <span class="label label-primary">Primary</span>
-        <span class="label label-success">Success</span>
-        <span class="label label-info">Info</span>
-        <span class="label label-warning">Warning</span>
-        <span class="label label-danger">Danger</span>
-      </h2>
-      <h3>
-        <span class="label label-default">Default</span>
-        <span class="label label-primary">Primary</span>
-        <span class="label label-success">Success</span>
-        <span class="label label-info">Info</span>
-        <span class="label label-warning">Warning</span>
-        <span class="label label-danger">Danger</span>
-      </h3>
-      <h4>
-        <span class="label label-default">Default</span>
-        <span class="label label-primary">Primary</span>
-        <span class="label label-success">Success</span>
-        <span class="label label-info">Info</span>
-        <span class="label label-warning">Warning</span>
-        <span class="label label-danger">Danger</span>
-      </h4>
-      <h5>
-        <span class="label label-default">Default</span>
-        <span class="label label-primary">Primary</span>
-        <span class="label label-success">Success</span>
-        <span class="label label-info">Info</span>
-        <span class="label label-warning">Warning</span>
-        <span class="label label-danger">Danger</span>
-      </h5>
-      <h6>
-        <span class="label label-default">Default</span>
-        <span class="label label-primary">Primary</span>
-        <span class="label label-success">Success</span>
-        <span class="label label-info">Info</span>
-        <span class="label label-warning">Warning</span>
-        <span class="label label-danger">Danger</span>
-      </h6>
-      <p>
-        <span class="label label-default">Default</span>
-        <span class="label label-primary">Primary</span>
-        <span class="label label-success">Success</span>
-        <span class="label label-info">Info</span>
-        <span class="label label-warning">Warning</span>
-        <span class="label label-danger">Danger</span>
-      </p>
-
-
-      <div class="page-header">
-        <h1>Badges</h1>
-      </div>
-      <p>
-        <a href="#">Inbox <span class="badge">42</span></a>
-      </p>
-      <ul class="nav nav-pills" role="tablist">
-        <li role="presentation" class="active"><a href="#">Home <span class="badge">42</span></a></li>
-        <li role="presentation"><a href="#">Profile</a></li>
-        <li role="presentation"><a href="#">Messages <span class="badge">3</span></a></li>
-      </ul>
-
-
-      <div class="page-header">
-        <h1>Dropdown menus</h1>
-      </div>
-      <div class="dropdown theme-dropdown clearfix">
-        <a id="dropdownMenu1" href="#" class="sr-only dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-          <li class="active" role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-          <li role="presentation" class="divider"></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
-        </ul>
-      </div>
-
-
-      <div class="page-header">
-        <h1>Navs</h1>
-      </div>
-      <ul class="nav nav-tabs" role="tablist">
-        <li role="presentation" class="active"><a href="#">Home</a></li>
-        <li role="presentation"><a href="#">Profile</a></li>
-        <li role="presentation"><a href="#">Messages</a></li>
-      </ul>
-      <ul class="nav nav-pills" role="tablist">
-        <li role="presentation" class="active"><a href="#">Home</a></li>
-        <li role="presentation"><a href="#">Profile</a></li>
-        <li role="presentation"><a href="#">Messages</a></li>
-      </ul>
-
-
-      <div class="page-header">
-        <h1>Navbars</h1>
-      </div>
-
-      <nav class="navbar navbar-default">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Project name</a>
-          </div>
-          <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li class="divider"></li>
-                  <li class="dropdown-header">Nav header</li>
-                  <li><a href="#">Separated link</a></li>
-                  <li><a href="#">One more separated link</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </nav>
-
-      <nav class="navbar navbar-inverse">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Project name</a>
-          </div>
-          <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#contact">Contact</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li class="divider"></li>
-                  <li class="dropdown-header">Nav header</li>
-                  <li><a href="#">Separated link</a></li>
-                  <li><a href="#">One more separated link</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </nav>
-
-
-      <div class="page-header">
-        <h1>Alerts</h1>
+	  <div class="page-header">
+        <h1>My Reminders</h1>
       </div>
       <div class="alert alert-success" role="alert">
-        <strong>Well done!</strong> You successfully read this important alert message.
-      </div>
-      <div class="alert alert-info" role="alert">
-        <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+	    <div class="pull-left" style="padding-top: 7.5px">
+		  <strong>You've acheived your weekly exercise goal</strong> for thje 3rd week in a row.  Way to go!
+	    </div>
+		<div class="btn-group pull-right">  
+		  <button type="button" class="btn btn-default">Dismiss</button> 
+	    </div>
+		<div class="clearfix"></div>
       </div>
       <div class="alert alert-warning" role="alert">
-        <strong>Warning!</strong> Best check yo self, you're not looking too good.
+	    <div class="pull-left" style="padding-top: 7.5px">
+          You haven't checked in yet today.  <strong>Do it now!</strong>
+	    </div>
+		<div class="btn-group pull-right">  
+		  <button type="button" class="btn btn-default">Dismiss</button> 
+	    </div>
+		<div class="clearfix"></div>
       </div>
       <div class="alert alert-danger" role="alert">
-        <strong>Oh snap!</strong> Change a few things up and try submitting again.
+	    <div class="pull-left" style="padding-top: 7.5px">
+          <strong>You smoked!</strong> There goes your ten-day winning streak.  Try not to do that again!
+	    </div>
+		<div class="btn-group pull-right">  
+		  <button type="button" class="btn btn-default">Dismiss</button> 
+	    </div>
+		<div class="clearfix"></div>
       </div>
-
-
-      <div class="page-header">
-        <h1>Progress bars</h1>
-      </div>
-      <div class="progress">
-        <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"><span class="sr-only">60% Complete</span></div>
-      </div>
-      <div class="progress">
-        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%"><span class="sr-only">40% Complete (success)</span></div>
-      </div>
-      <div class="progress">
-        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%"><span class="sr-only">20% Complete</span></div>
-      </div>
-      <div class="progress">
-        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">60% Complete (warning)</span></div>
-      </div>
-      <div class="progress">
-        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%"><span class="sr-only">80% Complete (danger)</span></div>
-      </div>
-      <div class="progress">
-        <div class="progress-bar progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%"><span class="sr-only">60% Complete</span></div>
-      </div>
-      <div class="progress">
-        <div class="progress-bar progress-bar-success" style="width: 35%"><span class="sr-only">35% Complete (success)</span></div>
-        <div class="progress-bar progress-bar-warning" style="width: 20%"><span class="sr-only">20% Complete (warning)</span></div>
-        <div class="progress-bar progress-bar-danger" style="width: 10%"><span class='sr-only'>10% Complete (danger)</span></div>
-      </div>
-
-
-      <div class="page-header">
-        <h1>List groups</h1>
-      </div>
-      <div class="row">
-        <div class="col-sm-4">
-          <ul class="list-group">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Morbi leo risus</li>
-            <li class="list-group-item">Porta ac consectetur ac</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-          </ul>
-        </div><!-- /.col-sm-4 -->
-        <div class="col-sm-4">
-          <div class="list-group">
-            <a href="#" class="list-group-item active">
-              Cras justo odio
-            </a>
-            <a href="#" class="list-group-item">Dapibus ac facilisis in</a>
-            <a href="#" class="list-group-item">Morbi leo risus</a>
-            <a href="#" class="list-group-item">Porta ac consectetur ac</a>
-            <a href="#" class="list-group-item">Vestibulum at eros</a>
-          </div>
-        </div><!-- /.col-sm-4 -->
-        <div class="col-sm-4">
-          <div class="list-group">
-            <a href="#" class="list-group-item active">
-              <h4 class="list-group-item-heading">List group item heading</h4>
-              <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-            </a>
-            <a href="#" class="list-group-item">
-              <h4 class="list-group-item-heading">List group item heading</h4>
-              <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-            </a>
-            <a href="#" class="list-group-item">
-              <h4 class="list-group-item-heading">List group item heading</h4>
-              <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-            </a>
-          </div>
-        </div><!-- /.col-sm-4 -->
-      </div>
-
-
-      <div class="page-header">
-        <h1>Panels</h1>
-      </div>
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <h3 class="panel-title">Panel title</h3>
-            </div>
-            <div class="panel-body">
-              Panel content
-            </div>
-          </div>
-          <div class="panel panel-primary">
-            <div class="panel-heading">
-              <h3 class="panel-title">Panel title</h3>
-            </div>
-            <div class="panel-body">
-              Panel content
-            </div>
-          </div>
-        </div><!-- /.col-sm-4 -->
-        <div class="col-sm-4">
+	  
+      <div class="page-header clearfix">
+    	<div class="btn-group pull-right" style="padding-top: 20px">
+		  <button type="button" class="btn btn-default">Add goal</button> 
+	    </div>
+        <h1 class="pull-left">My Goals</h1>
+	    <div class="clearfix"></div>  
+	  </div>
+      
+	  
+	  <div class="row">
+        <div class="col">
           <div class="panel panel-success">
-            <div class="panel-heading">
-              <h3 class="panel-title">Panel title</h3>
+            <div class="panel-heading clearfix">
+              <h3 class="panel-title pull-left" style="padding-top: 7.5px">Exercise 5 days a week</h3>
+			  <div class="btn-group pull-right">
+                <button type="button" class="btn btn-default">Edit</button> 
+			  </div>
+			  <div class="clearfix"></div>
             </div>
             <div class="panel-body">
-              Panel content
+			  <div style="margin-left:40px;margin-right:40px;">
+			    <div class="page-header clearfix" style="margin-top:0px">
+				  <h4 class="pull-left">Status</h4>
+			    </div>
+                <strong>You're doing great!</strong>  You've managed to exercise 5 days this week.  Keep it up!
+			    <div class="page-header clearfix">
+				  <h4 class="pull-left">Calendar</h4>
+			    </div>
+  	            <div id="cal1"></div>  
+			  </div>
             </div>
-          </div>
-          <div class="panel panel-info">
-            <div class="panel-heading">
-              <h3 class="panel-title">Panel title</h3>
-            </div>
-            <div class="panel-body">
-              Panel content
-            </div>
-          </div>
-        </div><!-- /.col-sm-4 -->
-        <div class="col-sm-4">
-          <div class="panel panel-warning">
-            <div class="panel-heading">
-              <h3 class="panel-title">Panel title</h3>
-            </div>
-            <div class="panel-body">
-              Panel content
-            </div>
-          </div>
-          <div class="panel panel-danger">
-            <div class="panel-heading">
-              <h3 class="panel-title">Panel title</h3>
-            </div>
-            <div class="panel-body">
-              Panel content
-            </div>
-          </div>
-        </div><!-- /.col-sm-4 -->
-      </div>
-
-
-      <div class="page-header">
-        <h1>Wells</h1>
-      </div>
-      <div class="well">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean lacinia bibendum nulla sed consectetur.</p>
-      </div>
-
-
-      <div class="page-header">
-        <h1>Carousel</h1>
-      </div>
-      <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-          <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner" role="listbox">
-          <div class="item active">
-            <img data-src="holder.js/1140x500/auto/#777:#555/text:First slide" alt="First slide">
-          </div>
-          <div class="item">
-            <img data-src="holder.js/1140x500/auto/#666:#444/text:Second slide" alt="Second slide">
-          </div>
-          <div class="item">
-            <img data-src="holder.js/1140x500/auto/#555:#333/text:Third slide" alt="Third slide">
           </div>
         </div>
-        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-          <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
       </div>
-
-
+      
+	  
+	  <div class="row">
+        <div class="col">
+          <div class="panel panel-warning">
+            <div class="panel-heading clearfix">
+              <h3 class="panel-title pull-left" style="padding-top: 7.5px">Floss every day</h3>
+			  <div class="btn-group pull-right">
+                <button type="button" class="btn btn-default">Edit</button> 
+			  </div>
+			  <div class="clearfix"></div>
+            </div>
+            <div class="panel-body">
+			  <div style="margin-left:40px;margin-right:40px;">
+			    <div class="page-header clearfix" style="margin-top:0px">
+				  <h4 class="pull-left">Status</h4>
+			    </div>
+                <strong>You haven't been flossing as much as you should.</strong>  Set a reminder to help yourself remember.
+			    <div class="page-header clearfix">
+				  <h4 class="pull-left">Calendar</h4>
+			    </div>
+  	            <div id="cal2"></div>  
+			  </div>
+			</div>
+          </div>
+        </div><!-- /.col-sm-4 -->
+      </div>
+	  
+	  
+      <div class="row">
+        <div class="col">
+          <div class="panel panel-danger">
+            <div class="panel-heading clearfix">
+              <h3 class="panel-title pull-left" style="padding-top: 7.5px">Drink only on Fridays and Saturdays</h3>
+			  <div class="btn-group pull-right">
+                <button type="button" class="btn btn-default">Edit</button> 
+			  </div>
+			  <div class="clearfix"></div>
+            </div>
+            <div class="panel-body">
+			  <div style="margin-left:40px;margin-right:40px;">
+			    <div class="page-header clearfix" style="margin-top:0px">
+				  <h4 class="pull-left">Status</h4>
+			    </div>
+				<strong>You've been drinking more than you ought to.</strong>  Lets work on that!
+			    <div class="page-header clearfix">
+				  <h4 class="pull-left">Calendar</h4>
+			    </div>
+  	            <div id="cal3"></div>  
+			  </div>
+            </div>
+          </div>
+        </div><!-- /.col-sm-4 -->
+		
+		
+      </div>
+      <div class="page-header clearfix">
+    	<div class="btn-group pull-right" style="padding-top: 20px">
+		  <button type="button" class="btn btn-default">Add habit</button> 
+	    </div>
+        <h1 class="pull-left">My Habits</h1>
+	    <div class="clearfix"></div>  
+	  </div>
+      
+	  
+	  <div class="row">
+        <div class="col">
+          <div class="panel panel-primary">
+            <div class="panel-heading clearfix">
+              <h3 class="panel-title pull-left" style="padding-top: 7.5px">Exercising</h3>
+			  <div class="btn-group pull-right" style="padding-left: 5px">
+                <button type="button" class="btn btn-default">Add event</button>
+			  </div>
+			  <div class="btn-group pull-right">
+                <button type="button" class="btn btn-default">Edit</button> 
+			  </div>
+			  <div class="clearfix"></div>
+            </div>
+            <div class="panel-body">
+              <strong>You're doing great!</strong>  You've managed to exercise 5 days this week.  Keep it up!
+            </div>
+          </div>
+        </div>
+      </div>
+	  
+	  
+      <div class="row">
+        <div class="col">
+          <div class="panel panel-primary">
+            <div class="panel-heading clearfix">
+              <h3 class="panel-title pull-left" style="padding-top: 7.5px">Flossing</h3>
+			  <div class="btn-group pull-right" style="padding-left: 5px">
+                <button type="button" class="btn btn-default">Add event</button>
+			  </div>
+			  <div class="btn-group pull-right">
+                <button type="button" class="btn btn-default">Edit</button> 
+			  </div>
+			  <div class="clearfix"></div>
+            </div>
+            <div class="panel-body">
+              <strong>You haven't been flossing as much as you should.</strong>  Set a reminder to help yourself remember.
+            </div>
+          </div>
+        </div><!-- /.col-sm-4 -->
+      </div>
+      
+	  
+	  <div class="row">
+        <div class="col">
+          <div class="panel panel-primary">
+            <div class="panel-heading clearfix">
+              <h3 class="panel-title pull-left" style="padding-top: 7.5px">Drinking</h3>
+			  <div class="btn-group pull-right" style="padding-left: 5px">
+                <button type="button" class="btn btn-default">Add event</button>
+			  </div>
+			  <div class="btn-group pull-right">
+                <button type="button" class="btn btn-default">Edit</button> 
+			  </div>
+			  <div class="clearfix"></div>
+            </div>
+            <div class="panel-body">
+              <strong>You've been drinking more than you ought to.</strong>  Lets work on that!
+            </div>
+          </div>
+        </div><!-- /.col-sm-4 -->
+      
+	  
+	  </div>  
+      <div class="page-header clearfix">
+    	<div class="btn-group pull-right" style="padding-top: 20px">
+		  <button type="button" class="btn btn-default">Add metric</button> 
+	    </div>
+        <h1 class="pull-left">My Metrics</h1>
+	    <div class="clearfix"></div>  
+	  </div>
+     
+	  <div class="row">
+        <div class="col">
+          <div class="panel panel-success">
+            <div class="panel-heading clearfix">
+              <h3 class="panel-title pull-left" style="padding-top: 7.5px">Blood Pressure</h3>
+			  <div class="btn-group pull-right" style="padding-left: 5px">
+                <button type="button" class="btn btn-default">Add data</button>
+			  </div>
+			  <div class="btn-group pull-right">
+                <button type="button" class="btn btn-default">Edit</button> 
+			  </div>
+			  <div class="clearfix"></div>
+            </div>
+            <div class="panel-body">
+			  <div style="margin-left:40px;margin-right:40px;">
+			    <div class="page-header clearfix" style="margin-top:0px">
+				  <h4 class="pull-left">Reporting Status</h4>
+			    </div>
+                <strong>Great job!</strong>  You recorded your blood pressure every day this week.
+			    <div class="page-header clearfix">
+				  <h4 class="pull-left">Blood pressure over time</h4>
+			    </div>
+                <canvas id="myChart2" height="100px"></canvas>
+			  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	   
+	  
+	  <div class="row">
+        <div class="col">
+          <div class="panel panel-danger">
+            <div class="panel-heading clearfix">
+              <h3 class="panel-title pull-left" style="padding-top: 7.5px">Weight</h3>
+			  <div class="btn-group pull-right" style="padding-left: 5px">
+                <button type="button" class="btn btn-default">Add data</button>
+			  </div>
+			  <div class="btn-group pull-right">
+                <button type="button" class="btn btn-default">Edit</button> 
+			  </div>
+			  <div class="clearfix"></div>
+            </div>
+            <div class="panel-body">
+			  <div style="margin-left:40px;margin-right:40px;">
+			    <div class="page-header clearfix" style="margin-top:0px">
+				  <h4 class="pull-left">Reporting Status</h4>
+			    </div>
+                <strong>You only reported your weight twice this week.</strong>  You need to check in more often!
+			    <div class="page-header clearfix">
+				  <h4 class="pull-left">Weight over time</h4>
+			    </div>
+                <canvas id="myChart" height="100px"></canvas>
+			  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	 
+	  
     </div> <!-- /container -->
 
+	 <!-- charts line graph JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+	<script src="bower_components/chartjs/Chart.js"></script>
+	<script>
 
+	//Goal summary chart
+    var ctx = document.getElementById("myChart3").getContext("2d");
+	var data = [
+    {
+        value: 1,
+        color:"#F7464A",
+        highlight: "#FF5A5E",
+        label: "Unsuccessful"
+    },
+    {
+        value: 1,
+        color: "#f8efc0",
+        highlight: "#fcf8e3",
+        label: "Marginal"
+    },
+    {
+        value: 1,
+        color: "#c8e5bc",
+        highlight: "#dff0d8",
+        label: "Successful"
+    }];
+    var myDoughnutChart = new Chart(ctx).Doughnut(data,{maintainAspectRatio:false,responsive:true});
+
+	
+	//Weight chart
+    var ctx = document.getElementById("myChart").getContext("2d");
+	var data = {
+    labels: ["January", "February", "March", "April", "May", "June", "July"],
+    datasets: [
+        {
+            label: "Weight",
+            fillColor: "rgba(220,220,220,0.2)",
+            strokeColor: "rgba(220,220,220,1)",
+            pointColor: "rgba(220,220,220,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(220,220,220,1)",
+            data: [65, 59, 80, 81, 56, 55, 40]
+        }]
+    };
+	var myLineChart = new Chart(ctx).Line(data,{maintainAspectRatio:false,responsive:true});
+	
+	//Blood pressure chart
+    var ctx2 = document.getElementById("myChart2").getContext("2d");
+	var data2 = {
+    labels: ["January", "February", "March", "April", "May", "June", "July"],
+    datasets: [
+        {
+            label: "Systolic",
+            fillColor: "rgba(220,220,220,0.2)",
+            strokeColor: "rgba(220,220,220,1)",
+            pointColor: "rgba(220,220,220,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(220,220,220,1)",
+            data: [65, 59, 80, 81, 56, 55, 40]
+        },
+        {
+            label: "Diastolic",
+            fillColor: "rgba(151,187,205,0.2)",
+            strokeColor: "rgba(151,187,205,1)",
+            pointColor: "rgba(151,187,205,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(151,187,205,1)",
+            data: [28, 48, 40, 19, 86, 27, 90]
+        }]
+    };
+	var myLineChart2 = new Chart(ctx2).Line(data2,{maintainAspectRatio:false,responsive:true});
+	
+	</script>
+	
+    <!-- D3 calendar JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<script>
+
+	var width = 960,
+		height = 136,
+		cellSize = 16; // cell size
+
+	var day = d3.time.format("%w"),
+		week = d3.time.format("%U"),
+		percent = d3.format(".1%"),
+		format = d3.time.format("%Y-%m-%d");
+
+	var color = d3.scale.quantize()
+		.domain([-.05, .05])
+		.range(d3.range(11).map(function(d) { return "q" + d + "-11"; }));
+
+	var svg = d3.select("#cal1").selectAll("svg")
+		.data(d3.range(2009, 2010))
+	  .enter().append("svg")
+		.attr("width", width)
+		.attr("height", height)
+		.attr("class", "RdYlGn")
+	  .append("g")
+		.attr("transform", "translate(" + ((width - cellSize * 53) / 2) + "," + (height - cellSize * 7 - 1) + ")");
+
+	svg.append("text")
+		.attr("transform", "translate(-6," + cellSize * 3.5 + ")rotate(-90)")
+		.style("text-anchor", "middle")
+		.text(function(d) { return d; });
+
+	var rect = svg.selectAll(".day")
+		.data(function(d) { return d3.time.days(new Date(d, 0, 1), new Date(d + 1, 0, 1)); })
+	  .enter().append("rect")
+		.attr("class", "day")
+		.attr("width", cellSize)
+		.attr("height", cellSize)
+		.attr("x", function(d) { return week(d) * cellSize; })
+		.attr("y", function(d) { return day(d) * cellSize; })
+		.datum(format);
+
+	rect.append("title")
+		.text(function(d) { return d; });
+
+	svg.selectAll(".month")
+		.data(function(d) { return d3.time.months(new Date(d, 0, 1), new Date(d + 1, 0, 1)); })
+	  .enter().append("path")
+		.attr("class", "month")
+		.attr("d", monthPath);
+
+	d3.csv("dji.csv", function(error, csv) {
+	  var data = d3.nest()
+		.key(function(d) { return d.Date; })
+		.rollup(function(d) { return (d[0].Close - d[0].Open) / d[0].Open; })
+		.map(csv);
+
+	  rect.filter(function(d) { return d in data; })
+		  .attr("class", function(d) { return "day " + color(data[d]); })
+		.select("title")
+		  .text(function(d) { return d + ": " + percent(data[d]); });
+	});
+
+	function monthPath(t0) {
+	  var t1 = new Date(t0.getFullYear(), t0.getMonth() + 1, 0),
+		  d0 = +day(t0), w0 = +week(t0),
+		  d1 = +day(t1), w1 = +week(t1);
+	  return "M" + (w0 + 1) * cellSize + "," + d0 * cellSize
+		  + "H" + w0 * cellSize + "V" + 7 * cellSize
+		  + "H" + w1 * cellSize + "V" + (d1 + 1) * cellSize
+		  + "H" + (w1 + 1) * cellSize + "V" + 0
+		  + "H" + (w0 + 1) * cellSize + "Z";
+	}
+
+	d3.select(self.frameElement).style("height", "2910px");
+
+	
+	
+	
+	var width = 960,
+		height = 136,
+		cellSize = 16; // cell size
+
+	var day = d3.time.format("%w"),
+		week = d3.time.format("%U"),
+		percent = d3.format(".1%"),
+		format = d3.time.format("%Y-%m-%d");
+
+	var color = d3.scale.quantize()
+		.domain([-.05, .05])
+		.range(d3.range(11).map(function(d) { return "q" + d + "-11"; }));
+
+	var svg = d3.select("#cal2").selectAll("svg")
+		.data(d3.range(2009, 2010))
+	  .enter().append("svg")
+		.attr("width", width)
+		.attr("height", height)
+		.attr("class", "RdYlGn")
+	  .append("g")
+		.attr("transform", "translate(" + ((width - cellSize * 53) / 2) + "," + (height - cellSize * 7 - 1) + ")");
+
+	svg.append("text")
+		.attr("transform", "translate(-6," + cellSize * 3.5 + ")rotate(-90)")
+		.style("text-anchor", "middle")
+		.text(function(d) { return d; });
+
+	var rect = svg.selectAll(".day")
+		.data(function(d) { return d3.time.days(new Date(d, 0, 1), new Date(d + 1, 0, 1)); })
+	  .enter().append("rect")
+		.attr("class", "day")
+		.attr("width", cellSize)
+		.attr("height", cellSize)
+		.attr("x", function(d) { return week(d) * cellSize; })
+		.attr("y", function(d) { return day(d) * cellSize; })
+		.datum(format);
+
+	rect.append("title")
+		.text(function(d) { return d; });
+
+	svg.selectAll(".month")
+		.data(function(d) { return d3.time.months(new Date(d, 0, 1), new Date(d + 1, 0, 1)); })
+	  .enter().append("path")
+		.attr("class", "month")
+		.attr("d", monthPath);
+
+	d3.csv("dji.csv", function(error, csv) {
+	  var data = d3.nest()
+		.key(function(d) { return d.Date; })
+		.rollup(function(d) { return (d[0].Close - d[0].Open) / d[0].Open; })
+		.map(csv);
+
+	  rect.filter(function(d) { return d in data; })
+		  .attr("class", function(d) { return "day " + color(data[d]); })
+		.select("title")
+		  .text(function(d) { return d + ": " + percent(data[d]); });
+	});
+
+	function monthPath(t0) {
+	  var t1 = new Date(t0.getFullYear(), t0.getMonth() + 1, 0),
+		  d0 = +day(t0), w0 = +week(t0),
+		  d1 = +day(t1), w1 = +week(t1);
+	  return "M" + (w0 + 1) * cellSize + "," + d0 * cellSize
+		  + "H" + w0 * cellSize + "V" + 7 * cellSize
+		  + "H" + w1 * cellSize + "V" + (d1 + 1) * cellSize
+		  + "H" + (w1 + 1) * cellSize + "V" + 0
+		  + "H" + (w0 + 1) * cellSize + "Z";
+	}
+
+	d3.select(self.frameElement).style("height", "2910px");
+	
+	
+	
+		var width = 960,
+		height = 136,
+		cellSize = 16; // cell size
+
+	var day = d3.time.format("%w"),
+		week = d3.time.format("%U"),
+		percent = d3.format(".1%"),
+		format = d3.time.format("%Y-%m-%d");
+
+	var color = d3.scale.quantize()
+		.domain([-.05, .05])
+		.range(d3.range(11).map(function(d) { return "q" + d + "-11"; }));
+
+	var svg = d3.select("#cal3").selectAll("svg")
+		.data(d3.range(2009, 2010))
+	  .enter().append("svg")
+		.attr("width", width)
+		.attr("height", height)
+		.attr("class", "RdYlGn")
+	  .append("g")
+		.attr("transform", "translate(" + ((width - cellSize * 53) / 2) + "," + (height - cellSize * 7 - 1) + ")");
+
+	svg.append("text")
+		.attr("transform", "translate(-6," + cellSize * 3.5 + ")rotate(-90)")
+		.style("text-anchor", "middle")
+		.text(function(d) { return d; });
+
+	var rect = svg.selectAll(".day")
+		.data(function(d) { return d3.time.days(new Date(d, 0, 1), new Date(d + 1, 0, 1)); })
+	  .enter().append("rect")
+		.attr("class", "day")
+		.attr("width", cellSize)
+		.attr("height", cellSize)
+		.attr("x", function(d) { return week(d) * cellSize; })
+		.attr("y", function(d) { return day(d) * cellSize; })
+		.datum(format);
+
+	rect.append("title")
+		.text(function(d) { return d; });
+
+	svg.selectAll(".month")
+		.data(function(d) { return d3.time.months(new Date(d, 0, 1), new Date(d + 1, 0, 1)); })
+	  .enter().append("path")
+		.attr("class", "month")
+		.attr("d", monthPath);
+
+	d3.csv("dji.csv", function(error, csv) {
+	  var data = d3.nest()
+		.key(function(d) { return d.Date; })
+		.rollup(function(d) { return (d[0].Close - d[0].Open) / d[0].Open; })
+		.map(csv);
+
+	  rect.filter(function(d) { return d in data; })
+		  .attr("class", function(d) { return "day " + color(data[d]); })
+		.select("title")
+		  .text(function(d) { return d + ": " + percent(data[d]); });
+	});
+
+	function monthPath(t0) {
+	  var t1 = new Date(t0.getFullYear(), t0.getMonth() + 1, 0),
+		  d0 = +day(t0), w0 = +week(t0),
+		  d1 = +day(t1), w1 = +week(t1);
+	  return "M" + (w0 + 1) * cellSize + "," + d0 * cellSize
+		  + "H" + w0 * cellSize + "V" + 7 * cellSize
+		  + "H" + w1 * cellSize + "V" + (d1 + 1) * cellSize
+		  + "H" + (w1 + 1) * cellSize + "V" + 0
+		  + "H" + (w0 + 1) * cellSize + "Z";
+	}
+
+	d3.select(self.frameElement).style("height", "2910px");
+	</script>
+	
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/docs.min.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/bootstrap/assets/js/docs.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-  </body>
+    <script src="bower_components/bootstrap/assets/js/ie10-viewport-bug-workaround.js"></script>
 </html>
